@@ -13,11 +13,14 @@ console.log(randomHexaNumberGenerator());
 
 function generateColor(num){
 
+    // setting number equals to the value of the input from the user
+    // selecting the result section class to the result variable 
     num = input.value;
     const result = document.querySelector('.result-section');
 
     
-
+    // here when the user puts the value loop as many as that number and create html elements
+    // when created the html element append to the parent
     for (let i = 0; i < num; i++){
         const newDiv = document.createElement('div');
         newDiv.textContent = 'Hello';
