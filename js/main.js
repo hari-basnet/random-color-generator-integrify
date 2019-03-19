@@ -5,7 +5,7 @@ const button = document.querySelector('button');
 button.addEventListener('click', generateColor);
 
 function randomHexaNumberGenerator(){
-    return `#${Math.random().toString(16).substring(2, 8)}`;
+    return `#${Math.random().toString(16).substring(2, 10)}`;
 }
 //console.log(randomHexaNumberGenerator());
 
@@ -23,7 +23,7 @@ function generateColor(num){
     // when created the html element append to the parent
     for (let i = 0; i < num; i++){
         const newDiv = document.createElement('div');
-        newDiv.textContent = 'Hello';
+        newDiv.textContent = 'Hello' + i;
         newDiv.style.backgroundColor = randomHexaNumberGenerator();
 
         const hexLabel = document.createElement('span');
