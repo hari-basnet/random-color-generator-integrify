@@ -1,8 +1,21 @@
-.result-section{
-
-    border-radius: 30%;
+.wrapper{
+    text-align: center;
+    width: 60%;
+    margin:0 auto;
 }
-.result-section div {
+.result-section{
+    display: flex;
+    flex-flow: column wrap;
+}
+.gen-div {
+    border-radius: 20px 20px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
-    height: 55px;
+.hex-text{
+    color: white;
+    font-size: 22px;
 }
