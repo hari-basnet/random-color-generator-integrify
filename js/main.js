@@ -4,7 +4,7 @@ const input = document.querySelector('input');
 const button = document.querySelector('button');
 button.addEventListener('click', generateColor);
 
-const clearButton = document.querySelector('.clear-button');
+const clearButton = document.querySelector('#clear-btn');
 clearButton.addEventListener('click', function(){
 
     const childDivs = document.querySelectorAll('.gen-div');

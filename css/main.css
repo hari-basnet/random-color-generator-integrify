@@ -1,14 +1,58 @@
+*{
+    font-family: 'Pacifio', cursive;
+}
 .wrapper{
     text-align: center;
     width: 60%;
     margin:0 auto;
 }
+
+#input-loc{
+    height: 25px;
+    width: 300px;
+    border-radius: 15px;
+    background-color: rgb(226, 250, 226);
+    font-size: 18px;
+    outline-style: none;
+}
+
+#generate-btn{
+    border-radius: 20px;
+    background-color:lightgray;
+    height: 30px;
+    width: 120px;
+    font-size: 14px;
+    font-weight: bolder;
+    outline-style: none;
+    
+}
+
+#clear-btn{
+    border-radius: 20px;
+    background-color:lightgray;
+    height: 30px;
+    width: 120px;
+    font-size: 14px;
+    font-weight: bolder;
+    outline-style: none;
+    
+}
+
+
+/* ##################### result section ################ */
 .result-section{
     display: flex;
     flex-flow: column wrap;
+    background-color: aquamarine;
+    border-radius: 20px;
+    /* border radius was not working and overflow hidden will fix it */
+    overflow: hidden;
 }
+/* .result-section div:first-child{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+} */
 .gen-div {
-    border-radius: 20px 20px;
     height: 85px;
     display: flex;
     align-items: center;
@@ -19,3 +63,12 @@
     color: white;
     font-size: 22px;
 }
+
+.copy-button{
+    border-radius: 20px;
+    background-color: orange;
+    height: 30px;
+    width: 60px;
+}
+
+/* wanna add animations here  */
