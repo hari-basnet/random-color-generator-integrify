@@ -5,14 +5,17 @@ const button = document.querySelector('button');
 button.addEventListener('click', generateColor);
 
 const clearButton = document.querySelector('#clear-btn');
-clearButton.addEventListener('click', function(){
+clearButton.addEventListener('click', clearGeneratedColors);
 
+function clearGeneratedColors() {
     const childDivs = document.querySelectorAll('.gen-div');
-    childDivs.forEach(element =>{
+    childDivs.forEach(element => {
+
         element.remove();
+
     })
 
-})
+}
 
 //creating random hexadecimal number that equals to hexa colors
 function randomHexaNumberGenerator() {
@@ -24,6 +27,7 @@ function randomHexaNumberGenerator() {
 // and appends to the parent div 
 function generateColor() {
 
+    clearGeneratedColors();
     // setting number equals to the value of the input from the user
     // selecting the result section class to the result variable 
     const result = document.querySelector('.result-section');
@@ -62,18 +66,18 @@ function generateColor() {
         copyButton.addEventListener('click', function () {
 
             // let hexText = document.querySelector('.hex-text');
-            
+
             try {
-                var range = document.createRange() ;// create new range object
+                var range = document.createRange();// create new range object
                 range.selectNodeContents(hexLabel); // set range to encompass desired element text
                 var selection = window.getSelection(); // get Selection object from currently user selected text
                 selection.removeAllRanges(); // unselect any user selected text (if any)
-                selection.addRange(range) ;// add range to Selection object t;
-              }
-              catch(err) {
+                selection.addRange(range);// add range to Selection object t;
+            }
+            catch (err) {
                 console.log(err);
-              }
-              document.execCommand("copy");
+            }
+            document.execCommand("copy");
         })
 
         newDiv.appendChild(hexLabel);
@@ -82,14 +86,13 @@ function generateColor() {
 
 
     }
-    clearInput();
+
 }
 
 // create function to clear input 
 function clearInput() {
 
     if (button.click) {
-
         input.value = '';
     }
 }

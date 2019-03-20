@@ -9,7 +9,7 @@
 
 #input-loc{
     height: 25px;
-    width: 300px;
+    width: 30vw;
     border-radius: 15px;
     background-color: rgb(226, 250, 226);
     font-size: 18px;
@@ -43,7 +43,6 @@
 .result-section{
     display: flex;
     flex-flow: column wrap;
-    background-color: aquamarine;
     border-radius: 20px;
     /* border radius was not working and overflow hidden will fix it */
     overflow: hidden;
@@ -72,3 +71,6 @@
 }
 
 /* wanna add animations here  */
+
+
+/*  */
