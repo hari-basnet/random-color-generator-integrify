@@ -4,15 +4,20 @@ const input = document.querySelector('input');
 const button = document.querySelector('button');
 button.addEventListener('click', generateColor);
 
+// const action = () => {
+//     clearGeneratedColors()
+//      clearInput()
+// }
+
 const clearButton = document.querySelector('#clear-btn');
-clearButton.addEventListener('click', clearGeneratedColors);
+clearButton.addEventListener('click', function(){clearGeneratedColors(); clearInput();});
+// clearButton.addEventListener('click', clearInput);
 
 function clearGeneratedColors() {
     const childDivs = document.querySelectorAll('.gen-div');
     childDivs.forEach(element => {
 
         element.remove();
-
     })
 
 }
@@ -26,7 +31,7 @@ function randomHexaNumberGenerator() {
 // A function that creates number of divs that user inputs
 // and appends to the parent div 
 function generateColor() {
-
+    
     clearGeneratedColors();
     // setting number equals to the value of the input from the user
     // selecting the result section class to the result variable 
