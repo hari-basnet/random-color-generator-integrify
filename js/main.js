@@ -19,7 +19,6 @@ function clearGeneratedColors() {
 
         element.remove();
     })
-
 }
 
 //creating random hexadecimal number that equals to hexa colors
@@ -35,9 +34,11 @@ function generateColor() {
     clearGeneratedColors();
     // setting number equals to the value of the input from the user
     // selecting the result section class to the result variable 
+
     const result = document.querySelector('.result-section');
     // here when the user puts the value loop as many as that number and create html elements
     // when created the html element append to the parent
+
     for (let i = 0; i < input.value; i++) {
         // before I was doing thisway ...
         // const hexArray = [];
@@ -50,7 +51,6 @@ function generateColor() {
         //create a variable and push it to empty array 
         const color = randomHexaNumberGenerator();
         const copyColor = color;
-
 
         // creating new div and set the color of our choice
         const newDiv = document.createElement('div');
@@ -70,8 +70,6 @@ function generateColor() {
         copyButton.setAttribute('class', 'copy-button');
         copyButton.addEventListener('click', function () {
 
-            // let hexText = document.querySelector('.hex-text');
-
             try {
                 var range = document.createRange();// create new range object
                 range.selectNodeContents(hexLabel); // set range to encompass desired element text
@@ -89,9 +87,7 @@ function generateColor() {
         newDiv.appendChild(copyButton);
         result.appendChild(newDiv);
 
-
     }
-
 }
 
 // create function to clear input 
