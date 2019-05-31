@@ -1,6 +1,6 @@
 # Random color generator
 
-This project helped me to understand random function.
+This project helped me to understand random function to create random color of certain numbers. This project also has functionality to copy the hex color code of the colors generated.
 
 # Demo
 
